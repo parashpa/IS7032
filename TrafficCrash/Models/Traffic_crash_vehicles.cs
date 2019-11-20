@@ -24,6 +24,7 @@ namespace TrafficCrashVehicles
         [JsonProperty("rd_no")]
         public string RdNo { get; set; }
 
+        [Required(ErrorMessage = "Please specify the Crash Date")]
         [JsonProperty("crash_date")]
         public DateTimeOffset CrashDate { get; set; }
 
@@ -73,7 +74,7 @@ namespace TrafficCrashVehicles
         public string FirstContactPoint { get; set; }
     }
 
-    public partial class TrafficCrashVehicle
+    public partial class TrafficCrashVehicle   
     {
         public static TrafficCrashVehicle[] FromJson(string json) => JsonConvert.DeserializeObject<TrafficCrashVehicle[]>(json, TrafficCrashVehicles.Converter.Settings);
     }

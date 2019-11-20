@@ -15,6 +15,16 @@ namespace TrafficCrash.Pages
 {
     public class IndexModel : PageModel
     {
+        public string GetData(string endpoint)
+        {
+            string downloadedData = "";
+            using (WebClient webClient = new WebClient())
+            {
+                downloadedData = webClient.DownloadString(endpoint);
+            }
+            return downloadedData;
+        }
+
         private readonly ILogger<IndexModel> _logger;
 
         public IndexModel(ILogger<IndexModel> logger)
@@ -27,15 +37,19 @@ namespace TrafficCrash.Pages
             List<Vehicle_People_Crash_details> vehicle_n_people = new List<Vehicle_People_Crash_details>();
             using (WebClient webClient = new WebClient())
             {
-                string vehicleJson = webClient.DownloadString("https://data.cityofchicago.org/resource/68nd-jvt3.json");
+     //           string vehicleJson = webClient.DownloadString("https://data.cityofchicago.org/resource/68nd-jvt3.json");
+                string vehicleJson = GetData("https://data.cityofchicago.org/resource/68nd-jvt3.json");
                 TrafficCrashVehicle[] allVehicles = TrafficCrashVehicle.FromJson(vehicleJson);
 
-                string peopleJson = webClient.DownloadString("https://data.cityofchicago.org/resource/u6pd-qa9d.json");
+                //                string peopleJson = webClient.DownloadString("https://data.cityofchicago.org/resource/u6pd-qa9d.json");
+                string peopleJson = GetData("https://data.cityofchicago.org/resource/u6pd-qa9d.json");
+
                 TrafficCrashPeople[] allPeople = TrafficCrashPeople.FromJson(peopleJson);
-             
+
+                IDictionary<string, TrafficCrashVehicle> trafficCrashPeople = new Dictionary<string, TrafficCrashVehicle>();
 
                 // this new array will hold only specimens that like water.
-                
+
 
                 // iterate over the specimens, to find which ones like water.
                 foreach (TrafficCrashPeople trafficCrashPeople in allPeople)
