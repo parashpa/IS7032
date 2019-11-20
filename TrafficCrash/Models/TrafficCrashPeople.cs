@@ -17,48 +17,65 @@ namespace TrafficCrashPeoples
 
     public partial class TrafficCrashPeople
     {
+        private string person_id;
+        private string person_type;
+        private string rd_no;
+        private long vehicle_id;
+        private DateTimeOffset crash_date;
+        private string sex;
+        private string safety_equipment;
+        private string airbag_deployed;
+        private string ejection;
+        private string injury_classification;
+        private string driver_action;
+        private string driver_vision;
+        private string physical_condition;
+        private string bac_result;
+
+
+
         [JsonProperty("person_id")]
-        public string PersonId { get; set; }
+        public string PersonId { get => person_id; set => person_id = value; }
 
         [JsonProperty("person_type")]
-        public string PersonType { get; set; }
+        public string PersonType { get => person_type; set => person_type = value; }
 
         [JsonProperty("rd_no")]
-        public string RdNo { get; set; }
+        public string RdNo { get => rd_no; set => rd_no = value; }
 
         [JsonProperty("vehicle_id")]
         [JsonConverter(typeof(ParseStringConverter))]
-        public long VehicleId { get; set; }
+        public long VehicleId { get => vehicle_id; set => vehicle_id = value; }
 
         [JsonProperty("crash_date")]
-        public DateTimeOffset CrashDate { get; set; }
+        public DateTimeOffset CrashDate { get => crash_date; set => crash_date =value; }
 
         [JsonProperty("sex")]
-        public string Sex { get; set; }
+        public string Sex { get => sex; set => sex =value; }
 
         [JsonProperty("safety_equipment")]
-        public string SafetyEquipment { get; set; }
+        public string SafetyEquipment { get => safety_equipment; set => safety_equipment = value; }
 
         [JsonProperty("airbag_deployed")]
-        public string AirbagDeployed { get; set; }
+        public string AirbagDeployed { get => airbag_deployed; set => airbag_deployed =value; }
 
         [JsonProperty("ejection")]
-        public string Ejection { get; set; }
+        public string Ejection { get => ejection; set => ejection =value; }
 
         [JsonProperty("injury_classification")]
-        public string InjuryClassification { get; set; }
+        public string InjuryClassification { get => injury_classification; set => injury_classification =value; }
 
         [JsonProperty("driver_action")]
-        public string DriverAction { get; set; }
+        public string DriverAction { get => driver_action; set => driver_action =value; }
 
         [JsonProperty("driver_vision")]
-        public string DriverVision { get; set; }
+        public string DriverVision { get => driver_vision; set => driver_vision =value; }
 
         [JsonProperty("physical_condition")]
-        public string PhysicalCondition { get; set; }
+        public string PhysicalCondition { get => physical_condition; set => physical_condition = value; }
 
         [JsonProperty("bac_result")]
-        public string BacResult { get; set; }
+        public string BacResult { get => bac_result; set => bac_result = value; }
     }
 
     public partial class TrafficCrashPeople

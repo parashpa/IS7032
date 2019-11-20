@@ -52,19 +52,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\prern\\.nuget\\packages\\": {}
+    "C:\\Users\\prath\\.nuget\\packages\\": {},
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\prern\\source\\repos\\IS7032\\TrafficCrash\\TrafficCrash.csproj",
+      "projectUniqueName": "C:\\Users\\prath\\Source\\Repos\\IS7032\\TrafficCrash\\TrafficCrash.csproj",
       "projectName": "TrafficCrash",
-      "projectPath": "C:\\Users\\prern\\source\\repos\\IS7032\\TrafficCrash\\TrafficCrash.csproj",
-      "packagesPath": "C:\\Users\\prern\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\prern\\source\\repos\\IS7032\\TrafficCrash\\obj\\",
+      "projectPath": "C:\\Users\\prath\\Source\\Repos\\IS7032\\TrafficCrash\\TrafficCrash.csproj",
+      "packagesPath": "C:\\Users\\prath\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\prath\\Source\\Repos\\IS7032\\TrafficCrash\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+      ],
       "configFilePaths": [
-        "C:\\Users\\prern\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\prath\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
