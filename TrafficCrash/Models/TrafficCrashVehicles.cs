@@ -10,67 +10,90 @@ namespace TrafficCrashVehicles
 {
     using System;
     using System.Collections.Generic;
-
+    using System.ComponentModel.DataAnnotations;
     using System.Globalization;
     using Newtonsoft.Json;
     using Newtonsoft.Json.Converters;
 
     public partial class TrafficCrashVehicle
     {
+
+        private long crash_unit_id;
+        private string rd_no;
+        private DateTimeOffset crash_date;
+        private long unit_no;
+        private string unit_type;
+        private long vehicle_id;
+        private string make;
+        private string model;
+        private string lic_plate_state;
+        private string vehicle_defect;
+        private string vehicle_type;
+        private string vehicle_use;
+        private string travel_direction;
+        private string maneuver;
+        private long occupant_cnt;
+        private string area_12_i;
+        private string first_contact_point;
+
+
+
+
         [JsonProperty("crash_unit_id")]
         [JsonConverter(typeof(ParseStringConverter))]
-        public long CrashUnitId { get; set; }
+        public long CrashUnitId { get => crash_unit_id; set => crash_unit_id = value; }
 
         [JsonProperty("rd_no")]
-        public string RdNo { get; set; }
+        public string RdNo { get => rd_no; set => rd_no = value; }
 
         [JsonProperty("crash_date")]
-        public DateTimeOffset CrashDate { get; set; }
+        public DateTimeOffset CrashDate { get => crash_date; set => crash_date = value; }
 
         [JsonProperty("unit_no")]
         [JsonConverter(typeof(ParseStringConverter))]
-        public long UnitNo { get; set; }
+        public long UnitNo { get => unit_no; set => unit_no = value; }
 
         [JsonProperty("unit_type")]
-        public string UnitType { get; set; }
+        public string UnitType { get => unit_type; set => unit_type = value; }
 
         [JsonProperty("vehicle_id")]
         [JsonConverter(typeof(ParseStringConverter))]
-        public long VehicleId { get; set; }
+        [Required]
+        public long VehicleId { get => vehicle_id; set => vehicle_id = value; }
 
         [JsonProperty("make")]
-        public string Make { get; set; }
+        public string Make { get => make; set => make = value; }
 
         [JsonProperty("model")]
-        public string Model { get; set; }
+        public string Model { get => model; set => model = value; }
 
         [JsonProperty("lic_plate_state")]
-        public string LicPlateState { get; set; }
+        public string LicPlateState { get => lic_plate_state; set => lic_plate_state = value; }
 
         [JsonProperty("vehicle_defect")]
-        public string VehicleDefect { get; set; }
+        public string VehicleDefect { get => vehicle_defect; set => vehicle_defect = value; }
 
         [JsonProperty("vehicle_type")]
-        public string VehicleType { get; set; }
+        public string VehicleType { get => vehicle_type; set => vehicle_type = value; }
 
         [JsonProperty("vehicle_use")]
-        public string VehicleUse { get; set; }
+        public string VehicleUse { get => vehicle_use; set => vehicle_use = value; }
 
         [JsonProperty("travel_direction")]
-        public string TravelDirection { get; set; }
+        public string TravelDirection { get => travel_direction; set => travel_direction = value; }
 
         [JsonProperty("maneuver")]
-        public string Maneuver { get; set; }
+        public string Maneuver { get => maneuver; set => maneuver = value; }
 
         [JsonProperty("occupant_cnt")]
         [JsonConverter(typeof(ParseStringConverter))]
-        public long OccupantCnt { get; set; }
+        public long OccupantCnt { get => occupant_cnt; set => occupant_cnt = value; }
 
         [JsonProperty("area_12_i")]
-        public string Area12_I { get; set; }
+        public string Area12_I { get => area_12_i; set => area_12_i = value; }
 
         [JsonProperty("first_contact_point")]
-        public string FirstContactPoint { get; set; }
+        public string FirstContactPoint { get => first_contact_point; set => first_contact_point = value; }
     }
 
     public partial class TrafficCrashVehicle

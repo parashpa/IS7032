@@ -24,7 +24,7 @@ namespace TrafficCrash.Pages
 
         public JsonResult OnGet()
         {
-            List<Vehicle_People_Crash_details> vehicle_n_people = new List<Vehicle_People_Crash_details>();
+            List<VehiclePeopleCrashdetails> vehicle_n_people = new List<VehiclePeopleCrashdetails>();
             using (WebClient webClient = new WebClient())
             {
                 string vehicleJson = webClient.DownloadString("https://data.cityofchicago.org/resource/68nd-jvt3.json");
@@ -32,20 +32,15 @@ namespace TrafficCrash.Pages
 
                 string peopleJson = webClient.DownloadString("https://data.cityofchicago.org/resource/u6pd-qa9d.json");
                 TrafficCrashPeople[] allPeople = TrafficCrashPeople.FromJson(peopleJson);
-             
-
-                // this new array will hold only specimens that like water.
-                
-
-                // iterate over the specimens, to find which ones like water.
+               
                 foreach (TrafficCrashPeople trafficCrashPeople in allPeople)
                 {
-                    // find the matching plant record for this specimen.
+                    
                     foreach (TrafficCrashVehicle trafficCrashVehicle in allVehicles)
                     {
                         if (trafficCrashVehicle.VehicleId == trafficCrashPeople.VehicleId)
                         {
-                            var a = new Vehicle_People_Crash_details();
+                            var a = new VehiclePeopleCrashdetails();
 
                             a.VehicleId = trafficCrashPeople.VehicleId;
                             a.PersonId = trafficCrashPeople.PersonId;
@@ -58,8 +53,6 @@ namespace TrafficCrash.Pages
                             a.CrashUnitId = trafficCrashVehicle.CrashUnitId;
                             a.Make = trafficCrashVehicle.Make;
                             a.Model = trafficCrashVehicle.Model;
-
-                            // we have a match!
                             vehicle_n_people.Add(a);
 
                         }
