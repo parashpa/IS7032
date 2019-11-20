@@ -7,7 +7,7 @@ using TrafficCrashPeoples;
 
 namespace TrafficCrash.Models
 {
-    public class Vehicle_People_Crash_details
+    public class VehiclePeopleCrashDetails
     {
         [JsonProperty("vehicle_id")]
         [JsonConverter(typeof(ParseStringConverter))]
