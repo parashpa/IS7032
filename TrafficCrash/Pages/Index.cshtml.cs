@@ -24,7 +24,7 @@ namespace TrafficCrash.Pages
 
         public JsonResult OnGet()
         {
-            List<Vehicle_People_Crash_details> vehicle_n_people = new List<Vehicle_People_Crash_details>();
+            List<VehiclePeopleCrashDetails> vehicle_n_people = new List<VehiclePeopleCrashDetails>();
             using (WebClient webClient = new WebClient())
             {
                 string vehicleJson = webClient.DownloadString("https://data.cityofchicago.org/resource/68nd-jvt3.json");
@@ -45,7 +45,7 @@ namespace TrafficCrash.Pages
                     {
                         if (trafficCrashVehicle.VehicleId == trafficCrashPeople.VehicleId)
                         {
-                            var a = new Vehicle_People_Crash_details();
+                            var a = new VehiclePeopleCrashDetails();
 
                             a.VehicleId = trafficCrashPeople.VehicleId;
                             a.PersonId = trafficCrashPeople.PersonId;
