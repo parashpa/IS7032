@@ -34,13 +34,9 @@ namespace TrafficCrash.Pages
                 TrafficCrashPeople[] allPeople = TrafficCrashPeople.FromJson(peopleJson);
              
 
-                // this new array will hold only specimens that like water.
-                
-
-                // iterate over the specimens, to find which ones like water.
                 foreach (TrafficCrashPeople trafficCrashPeople in allPeople)
                 {
-                    // find the matching plant record for this specimen.
+                   
                     foreach (TrafficCrashVehicle trafficCrashVehicle in allVehicles)
                     {
                         if (trafficCrashVehicle.VehicleId == trafficCrashPeople.VehicleId)
@@ -59,7 +55,6 @@ namespace TrafficCrash.Pages
                             a.Make = trafficCrashVehicle.Make;
                             a.Model = trafficCrashVehicle.Model;
 
-                            // we have a match!
                             vehicleAndPeople.Add(a);
 
                         }
