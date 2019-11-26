@@ -1,0 +1,29 @@
+﻿<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="XMLStylesheet.xsl"?>
+<users xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="uservalidation.xsd">
+  <user>
+    <firstname>Prerna</firstname>
+    <lastname>Parashar</lastname>
+    <bearcatid>M13515484</bearcatid>
+    <favoriteshortcut>Alt+Tab</favoriteshortcut>
+  </user>
+  <user>
+    <firstname>Dikshita</firstname>
+    <lastname>Barman</lastname>
+    <bearcatid>M13433390</bearcatid>
+    <favoriteshortcut>Ctrl+Shift+Del</favoriteshortcut>
+  </user>
+  <user>
+    <firstname>Garima</firstname>
+    <lastname>Bharadwaj</lastname>
+    <bearcatid>M13437455</bearcatid>
+    <favoriteshortcut>Ctrl+C</favoriteshortcut>
+  </user>
+  <user>
+    <firstname>Komal</firstname>
+    <lastname>Thakker</lastname>
+    <bearcatid>M13482280</bearcatid>
+    <favoriteshortcut>Ctrl+V</favoriteshortcut>
+  </user>
+</users>
