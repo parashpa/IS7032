@@ -1,3 +1,45 @@
 ﻿body {
-    background-color: lightgrey;
+     animation-name: example;
+     animation-duration: 20s;
+     background-color: floralwhite;
+    -webkit-animation-name: example; /* Safari 4.0 - 8.0 */
+    -webkit-animation-duration: 4s; /* Safari 4.0 - 8.0 */
 }
+
+p {
+    color: black;
+    font-size: 12px;
+    font-style: italic;
+    font-weight: bold;
+    font-family: Arial;
+}
+
+h1 {
+    color: blue;
+    font-weight: bold;
+}
+
+
+/* Safari 4.0 - 8.0 */
+@-webkit-keyframes example {
+    from {
+        background-color: floralwhite;
+    }
+
+    to {
+        background-color: deepskyblue;
+    }
+}
+
+/* Standard syntax */
+@keyframes example {
+    from {
+        background-color: floralwhite;
+    }
+
+    to {
+        background-color: cornflowerblue;
+    }
+}
+
+
