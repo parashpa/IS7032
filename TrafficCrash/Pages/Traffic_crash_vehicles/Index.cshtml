@@ -1,0 +1,63 @@
+﻿@page
+@model TrafficCrash.Pages.Traffic_crash_vehicles.IndexModel
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-page="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.TrafficCrashVehicle[0].CrashUnitId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TrafficCrashVehicle[0].RdNo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TrafficCrashVehicle[0].UnitType)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TrafficCrashVehicle[0].VehicleId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TrafficCrashVehicle[0].Make)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TrafficCrashVehicle[0].Model)
+            </th>
+ 
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.TrafficCrashVehicle) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.CrashUnitId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.RdNo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.UnitType)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.VehicleId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Make)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Model)
+            </td>
+
+        </tr>
+}
+    </tbody>
+</table>

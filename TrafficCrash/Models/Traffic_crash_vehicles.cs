@@ -17,9 +17,11 @@ namespace TrafficCrashVehicles
 
     public partial class TrafficCrashVehicle
     {
+        [JsonProperty("id")]
+        public long Id { get; set; }
+
         [JsonProperty("crash_unit_id")]
-        [JsonConverter(typeof(ParseStringConverter))]
-        public long CrashUnitId { get; set; }
+        public string CrashUnitId { get; set; }
 
         [JsonProperty("rd_no")]
         public string RdNo { get; set; }
@@ -28,15 +30,13 @@ namespace TrafficCrashVehicles
         public DateTimeOffset CrashDate { get; set; }
 
         [JsonProperty("unit_no")]
-        [JsonConverter(typeof(ParseStringConverter))]
-        public long UnitNo { get; set; }
+        public string UnitNo { get; set; }
 
         [JsonProperty("unit_type")]
         public string UnitType { get; set; }
 
         [JsonProperty("vehicle_id")]
-        [JsonConverter(typeof(ParseStringConverter))]
-        public long VehicleId { get; set; }
+        public string VehicleId { get; set; }
 
         [JsonProperty("make")]
         public string Make { get; set; }
@@ -46,6 +46,11 @@ namespace TrafficCrashVehicles
 
         [JsonProperty("lic_plate_state")]
         public string LicPlateState { get; set; }
+
+        internal static void Add(TrafficCrashVehicle fs)
+        {
+            throw new NotImplementedException();
+        }
 
         [JsonProperty("vehicle_defect")]
         public string VehicleDefect { get; set; }
