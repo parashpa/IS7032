@@ -14,27 +14,38 @@ namespace TrafficCrashVehicles
     using System.Globalization;
     using Newtonsoft.Json;
     using Newtonsoft.Json.Converters;
+    using System.ComponentModel.DataAnnotations;
+    using System.Linq;
+    using System.Threading.Tasks;
 
     public partial class TrafficCrashVehicle
     {
+
         [JsonProperty("id")]
         public long Id { get; set; }
 
+        [Required]
         [JsonProperty("crash_unit_id")]
         public string CrashUnitId { get; set; }
 
+
+        [Required]
         [JsonProperty("rd_no")]
         public string RdNo { get; set; }
 
+        [Required]
         [JsonProperty("crash_date")]
         public DateTimeOffset CrashDate { get; set; }
 
+        [Required]
         [JsonProperty("unit_no")]
         public string UnitNo { get; set; }
 
+        [Required]
         [JsonProperty("unit_type")]
         public string UnitType { get; set; }
 
+        [Required]
         [JsonProperty("vehicle_id")]
         public string VehicleId { get; set; }
 
@@ -44,9 +55,11 @@ namespace TrafficCrashVehicles
         [JsonProperty("model")]
         public string Model { get; set; }
 
+        [Required]
         [JsonProperty("lic_plate_state")]
         public string LicPlateState { get; set; }
 
+        [Required]
         internal static void Add(TrafficCrashVehicle fs)
         {
             throw new NotImplementedException();
@@ -61,6 +74,7 @@ namespace TrafficCrashVehicles
         [JsonProperty("vehicle_use")]
         public string VehicleUse { get; set; }
 
+        [Required]
         [JsonProperty("travel_direction")]
         public string TravelDirection { get; set; }
 

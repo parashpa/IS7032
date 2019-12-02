@@ -14,31 +14,33 @@ namespace TrafficCrashPeoples
     using System.Globalization;
     using Newtonsoft.Json;
     using Newtonsoft.Json.Converters;
-
+    using System.ComponentModel.DataAnnotations;
+    using System.Linq;
+    using System.Threading.Tasks;
 
     public partial class TrafficCrashPeople
     {
         [JsonProperty("person_id")]
         public string PersonId { get; set; }
-
+        [Required]
         [JsonProperty("person_type")]
         public string PersonType { get; set; }
-
+        [Required]
         [JsonProperty("rd_no")]
         public string RdNo { get; set; }
 
         [JsonProperty("vehicle_id")]
         public string VehicleId { get; set; }
-
+        [Required]
         [JsonProperty("crash_date")]
         public DateTimeOffset CrashDate { get; set; }
-
+        [Required]
         [JsonProperty("sex")]
         public string Sex { get; set; }
 
         [JsonProperty("safety_equipment")]
         public string SafetyEquipment { get; set; }
-
+        [Required]
         [JsonProperty("airbag_deployed")]
         public string AirbagDeployed { get; set; }
 
@@ -47,7 +49,7 @@ namespace TrafficCrashPeoples
 
         [JsonProperty("injury_classification")]
         public string InjuryClassification { get; set; }
-
+        [Required]
         [JsonProperty("driver_action")]
         public string DriverAction { get; set; }
 
@@ -56,7 +58,7 @@ namespace TrafficCrashPeoples
 
         [JsonProperty("physical_condition")]
         public string PhysicalCondition { get; set; }
-
+        [Required]
         [JsonProperty("bac_result")]
         public string BacResult { get; set; }
     }

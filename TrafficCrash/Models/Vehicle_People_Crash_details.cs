@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using System.ComponentModel.DataAnnotations;
 using TrafficCrashPeoples;
 
 namespace TrafficCrash.Models
@@ -18,7 +19,7 @@ namespace TrafficCrash.Models
 
         [JsonProperty("rd_no")]
         public string RdNo { get; set; }
-
+        [Required]
         [JsonProperty("crash_date")]
         public DateTimeOffset CrashDate { get; set; }
 
@@ -31,17 +32,17 @@ namespace TrafficCrash.Models
 
         [JsonProperty("driver_vision")]
         public string DriverVision { get; set; }
-
+        [Required]
         [JsonProperty("physical_condition")]
         public string PhysicalCondition { get; set; }
 
         [JsonProperty("crash_unit_id")]
         [JsonConverter(typeof(ParseStringConverter))]
         public long CrashUnitId { get; set; }
-
+        [Required]
         [JsonProperty("make")]
         public string Make { get; set; }
-
+        [Required]
         [JsonProperty("model")]
         public string Model { get; set; }
 
