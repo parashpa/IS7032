@@ -15,6 +15,7 @@ namespace TrafficCrashPeoples
     using Newtonsoft.Json;
     using Newtonsoft.Json.Converters;
 
+
     public partial class TrafficCrashPeople
     {
         [JsonProperty("person_id")]
@@ -27,8 +28,7 @@ namespace TrafficCrashPeoples
         public string RdNo { get; set; }
 
         [JsonProperty("vehicle_id")]
-        [JsonConverter(typeof(ParseStringConverter))]
-        public long VehicleId { get; set; }
+        public string VehicleId { get; set; }
 
         [JsonProperty("crash_date")]
         public DateTimeOffset CrashDate { get; set; }
