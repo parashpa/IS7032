@@ -1,0 +1,30 @@
+﻿@page
+@model TrafficCrash.Pages.FireAccidentsModel
+@{
+     ViewData["Title"] = "FireAccidents";
+    var fireAccidents = ViewData["fireAccidents"];
+}
+
+<h3 style="color:blue">Fellow students group json data : Cincinnati Fire Accidents</h3>
+<a href="https://cincinnatiaccidents.azurewebsites.net/api/neighbourhoods/downtown">https://cincinnatiaccidents.azurewebsites.net/api/neighbourhoods/downtown></a>
+<table class="table table-striped table-hover">
+    <thead class="thead-dark">
+        <tr>
+            <th>Address</th>
+            <th>Neighborhood</th>
+            <th>AccidentDate</th>
+            <th>AccidentType</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var fireacc in ViewBag.fireAccidents)
+        {
+        <tr>
+            <td>@fireacc.Address</td>
+            <td>@fireacc.Neighborhood</td>
+            <td>@fireacc.AccidentDate</td>
+            <td>@fireacc.AccidentType</td>
+        </tr>
+        }
+    </tbody>
+</table>

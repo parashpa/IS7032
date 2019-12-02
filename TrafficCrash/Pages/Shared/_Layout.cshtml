@@ -6,6 +6,11 @@
     <title>@ViewData["Title"] - TrafficCrash</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          asp-fallback-href="~/lib/bootstrap/dist/css/bootstrap.min.css"
+          asp-fallback-test-class="sr-only" asp-fallback-test-property="position" asp-fallback-test-value="absolute"
+          crossorigin="anonymous"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" />
 </head>
 <body>
     <header>
@@ -22,13 +27,16 @@
                             <a class="nav-link text-dark" asp-area="" asp-page="/Index">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-page="/Traffic_crash_vehicles/Create">New crashed Vehicle details</a>
+                            <a class="nav-link text-dark" asp-area="" asp-page="/Traffic_crash_vehicles/Create"><strong>New Crash</strong></a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-page="/SearchPeopleandVehicle">Crashed Vehicles and Victim Details  </a>
+                            <a class="nav-link text-dark" asp-area="" asp-page="/SearchPeopleandVehicle"><strong>Search Details</strong></a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-page="/VehicleCrashesByCity" asp-route-city="CHICAGO">Crashes by city</a>
+                            <a class="nav-link text-dark" asp-area="" asp-page="/VehicleCrashesByCity" asp-route-city="CHICAGO"><strong>API</strong></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-page="/FireAccidents"><strong>Fire Accidents</strong></a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-page="/Privacy">Privacy</a>

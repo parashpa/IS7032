@@ -59,12 +59,6 @@ namespace TrafficCrashVehicles
         [JsonProperty("lic_plate_state")]
         public string LicPlateState { get; set; }
 
-        [Required]
-        internal static void Add(TrafficCrashVehicle fs)
-        {
-            throw new NotImplementedException();
-        }
-
         [JsonProperty("vehicle_defect")]
         public string VehicleDefect { get; set; }
 

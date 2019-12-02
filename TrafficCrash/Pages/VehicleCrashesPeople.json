@@ -1,0 +1,95 @@
+
+    {
+        "$schema": "http://json-schema.org/draft-06/schema#",
+        "type": "array",
+        "items": {
+            "$ref": "#/definitions/TrafficCrashElement"
+        },
+        "definitions": {
+            "TrafficCrashElement": {
+                "type": "object",
+                "additionalProperties": false,
+                "properties": {
+                    "person_id": {
+                        "type": "string"
+                    },
+                    "person_type": {
+                        "type": "string"
+                    },
+                    "rd_no": {
+                        "type": "string"
+                    },
+                    "vehicle_id": {
+                        "type": "string",
+                        "format": "integer"
+                    },
+                    "crash_date": {
+                        "type": "string",
+                        "format": "date-time"
+                    },
+                    "city": {
+                        "type": "string"
+                    },
+                    "state": {
+                        "type": "string"
+                    },
+                    "zipcode": {
+                        "type": "string",
+                        "format": "integer"
+                    },
+                    "sex": {
+                        "type": "string"
+                    },
+                    "age": {
+                        "type": "string",
+                        "format": "integer"
+                    },
+                    "safety_equipment": {
+                        "type": "string"
+                    },
+                    "airbag_deployed": {
+                        "type": "string"
+                    },
+                    "ejection": {
+                        "type": "string"
+                    },
+                    "injury_classification": {
+                        "type": "string"
+                    },
+                    "driver_action": {
+                        "type": "string"
+                    },
+                    "driver_vision": {
+                        "type": "string"
+                    },
+                    "physical_condition": {
+                        "type": "string"
+                    },
+                    "bac_result": {
+                        "type": "string"
+                    }
+                },
+                "required": [
+                    "age",
+                    "airbag_deployed",
+                    "bac_result",
+                    "city",
+                    "crash_date",
+                    "driver_action",
+                    "driver_vision",
+                    "ejection",
+                    "injury_classification",
+                    "person_id",
+                    "person_type",
+                    "physical_condition",
+                    "rd_no",
+                    "safety_equipment",
+                    "sex",
+                    "state",
+                    "vehicle_id",
+                    "zipcode"
+                ],
+                "title": "TrafficCrashElement"
+            }
+        }
+    }
