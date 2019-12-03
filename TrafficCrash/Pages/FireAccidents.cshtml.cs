@@ -18,7 +18,7 @@ namespace TrafficCrash.Pages
             {
 
 
-                string fireAccidentsString = webClient.DownloadString("https://cincinnatiaccidents.azurewebsites.net/api/neighbourhoods/downtown");
+                string fireAccidentsString = webClient.DownloadString("https://cincinnatiaccidents.azurewebsites.net/api/accidents/downtown");
                 fireAccidents = FireAccidents.FromJson(fireAccidentsString);
                 ViewData["fireAccidents"] = fireAccidents;
 
